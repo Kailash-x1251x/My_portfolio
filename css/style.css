@@ -168,6 +168,69 @@ section {
     border-radius: 5px;
 }
 
+/* Certificates Section */
+#certificates {
+    padding: 2rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#certificates h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.certificates-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.certificates-container {
+    display: flex;
+    gap: 1rem;
+    animation: scrollCertificates 25s linear infinite;
+}
+
+.certificates-container:hover {
+    animation-play-state: paused; /* Pause when hovered */
+}
+
+.certificate-card {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Infinite scroll effect */
+@keyframes scrollCertificates {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Dark Mode Styling */
+.dark-mode .certificate-card {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
 /* Contact Form */
 form {
     display: flex;
